@@ -1,25 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>✍ | Calcula tu ponderado</title>
+  <title>Calcula tu ponderado | ✍</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto+Mono&display=swap">
   <link rel="stylesheet" href="css/style.css">
+  <meta name="author" content="ehmenzala">
+  <meta name="description" content="Encriptador de mensajes desarrollado durante el programa de educación y empleabilidad ONE (Oracle Next Education)">
 </head>
 <body>
-  <header></header>
+  <header class="page-header">
+    <div class="header-content container">
+      <h1>Calcula tu ponderado</h1>
+    </div>
+  </header>
   <main>
-    <h1>Calcula tu ponderado</h1>
-    <form id="calcs-form">
-      <label for="no-cursos">Numero de cursos</label>
-      <input type="number" id="no-cursos">
-      <fieldset id="grades-section"></fieldset>
-      <button type="button" id="calc-btn">Calculcar promedio ponderado</button>
-      <input type="text" id="average" value="43" readonly>
-    </form>
+    <div class="container">
+      <form id="calcs-form" class="calcs-form">
+        <div class="input-box--out">
+          <label for="no-cursos">Numero de cursos</label>
+          <input type="number" min="1" id="no-cursos">
+        </div>
+        <fieldset id="grades-section" class="grades-section"></fieldset>
+        <button type="button" id="calc-btn" class="calc-btn btn">Calcular</button>
+        <div class="input-box--out">
+          <label for="average">Promedio ponderado</label>
+          <input type="text" id="average" readonly>
+        </div>
+      </form>
+    </div>
   </main>
-  <footer></footer>
+  <footer class="page-footer container">
+    <p class="footer-auth">Desarrollado por... ¿Quién sabe?</p>
+  </footer>
   <script src="script.js"></script>
 </body>
 </html>

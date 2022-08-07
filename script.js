@@ -38,6 +38,13 @@ function renderNInputs(n) {
     const $labelCredits = d.createElement('LABEL')
     const $inputGrade = d.createElement('INPUT')
     const $inputCredits = d.createElement('INPUT')
+    const $inputBox = d.createElement('DIV')
+    const $inputBoxInner1 = d.createElement('DIV')
+    const $inputBoxInner2 = d.createElement('DIV')
+
+    $inputBox.classList.add('input-box')
+    $inputBoxInner1.classList.add('input-box--inner')
+    $inputBoxInner2.classList.add('input-box--inner')
 
     $labelGrade.setAttribute('for', `grade-${i}`)
     $labelGrade.textContent = `Nota ${i}: `
@@ -49,12 +56,14 @@ function renderNInputs(n) {
     $inputCredits.type = 'text'
     $inputCredits.id = `credits-${i}`
     $inputCredits.dataset.credit = 'credit'
-
-    fragment.appendChild($labelGrade)
-    fragment.appendChild($inputGrade)
-    fragment.appendChild($labelCredits)
-    fragment.appendChild($inputCredits)
+        
+    $inputBoxInner1.appendChild($labelGrade)
+    $inputBoxInner1.appendChild($inputGrade)
+    $inputBoxInner2.appendChild($labelCredits)
+    $inputBoxInner2.appendChild($inputCredits)
+    $inputBox.appendChild($inputBoxInner1)
+    $inputBox.appendChild($inputBoxInner2)
+    fragment.appendChild($inputBox)
   }
-
   $fieldset.appendChild(fragment)
 }

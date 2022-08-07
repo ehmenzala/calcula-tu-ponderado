@@ -1,0 +1,186 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+:root {
+  --clr-primary-400: hsl(162, 100%, 89%);
+  --clr-primary-500: hsl(162, 100%, 74%);
+
+  --fs-300: 1.15rem;
+  --fs-400: 1.3125rem;
+  --fs-500: 2.5rem;
+  --fs-600: 4rem;
+  --ff-primary: 'Poppins', sans-serif;
+  --ff-secondary: 'Roboto Mono', monospace;
+}
+
+body {
+  font-family: var(--ff-primary);
+  font-size: var(--fs-400);
+  line-height: 1.5;
+
+  /* Footer to bottom */
+  display: flex;
+  flex-direction: column;
+}
+
+body > * + *,
+.calcs-form > * + * {
+  margin-top: 1.25em;
+}
+
+.grades-section > * + * {
+  margin-top: .5em;
+}
+
+input {
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  padding-inline: 1ch;
+  font-family: var(--ff-primary);
+}
+
+h1 {
+  font-size: var(--fs-600);
+}
+
+.container {
+  width: 30rem;
+  max-width: 80%;
+  margin-inline: auto;
+}
+
+.header-content,
+.footer-auth {
+  text-align: center;
+}
+
+.header-content {
+  padding: 1.5em;
+}
+
+.footer-auth {
+  margin-block: 1em;
+}
+
+.page-footer {
+  margin-top: auto;
+}
+
+.input-box--out {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-box--out input {
+  width: calc(7.5ch * 2);
+  background-color: var(--clr-primary-500);
+}
+
+.input-box--out label {
+  font-weight: 600;
+}
+
+.input-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.input-box input {
+  width: 7.5ch;
+}
+
+.input-box--inner {
+  text-align: center;
+  font-family: var(--ff-secondary);
+}
+
+.input-box--inner input {
+  background-color: var(--clr-primary-400);
+}
+
+
+.btn {
+  display: block;
+  outline: none;
+  border: none;
+  padding: 0.125em 2em;
+  margin-inline: auto;
+  border-radius: 10px;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.calc-btn {
+  background-color: rgb(44, 44, 44);
+  color: rgb(226, 226, 226);
+  /* border: 1px solid var(--clr-primary-500) */
+}
+
+@media screen and (max-width: 32.5em) {
+  body {
+    font-size: var(--fs-300);
+  }
+  
+  h1 {
+    font-size: var(--fs-500);
+  }
+}
