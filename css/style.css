@@ -127,6 +127,10 @@ h1 {
   margin-block: 1em;
 }
 
+.footer-auth > a {
+  color: var(--clr-accent-400);
+}
+
 .page-footer {
   margin-top: auto;
 }

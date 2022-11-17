@@ -8,6 +8,7 @@ const $easterEgg = d.querySelector('.easter-egg')
 
 $cursosInput.addEventListener('input', (e) => {
   const value = parseInt(e.target.value)
+
   if (value < 0) {
     $easterEgg.classList.remove('hidden') 
     return
@@ -32,8 +33,12 @@ function calcAverage ($container) {
     totalGC += grades[i] * credits[i]
   }
 
-  let average = (totalGC / totalCredits).toFixed(2)
-  $average.value = average
+  let average = (totalGC / totalCredits)
+
+  if(average) {
+    let stringAverage = average.toFixed(2)
+    $average.value = stringAverage
+  }
 }
 
 function renderNInputs(n) {
