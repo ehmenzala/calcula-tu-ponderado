@@ -4,10 +4,17 @@ const $cursosInput = d.getElementById('no-cursos')
 const $fieldset = d.getElementById('grades-section')
 const $average = d.getElementById('average')
 const $calcBtn = d.getElementById('calc-btn')
+const $easterEgg = d.querySelector('.easter-egg')
 
 $cursosInput.addEventListener('input', (e) => {
-  const courses = parseInt(e.target.value)
-  renderNInputs(courses)
+  const value = parseInt(e.target.value)
+  if (value < 0) {
+    $easterEgg.classList.remove('hidden') 
+    return
+  } else {
+    $easterEgg.classList.add('hidden')
+  }
+  renderNInputs(value)
 })
 
 $calcBtn.addEventListener('click', () => {

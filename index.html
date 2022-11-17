@@ -9,8 +9,42 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto+Mono&display=swap">
   <link rel="stylesheet" href="css/style.css">
+  <!-- HTML Meta Tags -->
   <meta name="author" content="ehmenzala">
-  <meta name="description" content="Encriptador de mensajes desarrollado durante el programa de educación y empleabilidad ONE (Oracle Next Education)">
+  <meta name="description" content="Calculadora de promedios ponderados. Guarda el sitio en favoritos y úsalo cuando lo necesites.">
+  <!-- Facebook Meta Tags -->
+  <meta property="og:title" content="Calcula tu ponderado">
+  <meta property="og:description" content="Calculadora de promedios ponderados. Guarda el sitio en favoritos y úsalo cuando lo necesites.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="-">
+  <meta property="og:image" content="-">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:alt" content="Calculadora acompañada del títutlo 'Calcula tu ponderado' y el subtítulo 'Guarda el sitio en favoritos y úsalo cuando lo necesites'.">
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:title" content="Calcula tu ponderado">
+  <meta name="twitter:description" content="Calculadora de promedios ponderados. Guarda el sitio en favoritos y úsalo cuando lo necesites.">
+  <meta property="twitter:domain" content="-">
+  <meta property="twitter:url" content="-">
+  <meta name="twitter:image" content="-">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="images/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="images/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
 </head>
 <body>
   <header class="page-header">
@@ -22,8 +56,9 @@
     <div class="container">
       <form id="calcs-form" class="calcs-form">
         <div class="input-box--out">
-          <label for="no-cursos">Numero de cursos</label>
+          <label for="no-cursos">Número de cursos</label>
           <input type="number" min="1" id="no-cursos">
+          <p class="easter-egg hidden">¿Cursos son negativos? 🤔</p>
         </div>
         <fieldset id="grades-section" class="grades-section"></fieldset>
         <button type="button" id="calc-btn" class="calc-btn btn">Calcular</button>
