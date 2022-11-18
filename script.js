@@ -62,10 +62,10 @@ function renderNInputs(n) {
     $labelGrade.textContent = `Nota ${i}: `
     $labelCredits.setAttribute('for', `credits-${i}`)
     $labelCredits.textContent = 'Créditos: '
-    $inputGrade.type = 'text'
+    $inputGrade.type = 'number'
     $inputGrade.id = `grade-${i}`
     $inputGrade.dataset.grade = 'grade'
-    $inputCredits.type = 'text'
+    $inputCredits.type = 'number'
     $inputCredits.id = `credits-${i}`
     $inputCredits.dataset.credit = 'credit'
         
