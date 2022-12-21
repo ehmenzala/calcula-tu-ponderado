@@ -15,7 +15,12 @@ $cursosInput.addEventListener('input', (e) => {
   } else {
     $easterEgg.classList.add('hidden')
   }
-  renderNInputs(value)
+
+  if (value > 20) {
+    renderNInputs(20)
+  } else {
+    renderNInputs(value)
+  }
 })
 
 $calcBtn.addEventListener('click', () => {
@@ -77,5 +82,6 @@ function renderNInputs(n) {
     $inputBox.appendChild($inputBoxInner2)
     fragment.appendChild($inputBox)
   }
+
   $fieldset.appendChild(fragment)
 }
